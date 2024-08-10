@@ -250,7 +250,7 @@ for name_index in PDL_index_list:
     p.SectionAssignment(region=region, sectionName='cohesive', offset=0.0, offsetType=MIDDLE_SURFACE, offsetField='', thicknessAssignment=FROM_SECTION)        
 
 #edit step
-mdb.models['bending-test-cohesive'].ExplicitDynamicsStep(name='Step-1', previous='Initial', timePeriod=0.01, improvedDtMethod=ON)
+mdb.models['bending-test-cohesive'].ExplicitDynamicsStep(name='Step-1', previous='Initial', timePeriod=0.1, improvedDtMethod=ON)
 mdb.models['bending-test-cohesive'].fieldOutputRequests['F-Output-1'].setValues(variables=('S', 'E', 'U', 'RF', 'CSTRESS', 'DAMAGEFT', 'DAMAGEFC', 'DAMAGEMT', 'DAMAGEMC', 'SDEG', 'DMICRT', 'SDV', 'STATUS'), numIntervals=500)  
 
 #interaction
